@@ -1,0 +1,19 @@
+class Solution{
+    public:
+        long long required(long long arr[], long long n, long long k) {
+        // Your code goes here
+        priority_queue<int>maxH;
+        for(int i=0;i<n;i++)
+        {
+            maxH.push(arr[i]);
+        }
+        int maxi = maxH.top();
+        if(k<maxi)
+        {
+            return (maxi-k);
+        }
+        else{
+            return -1;
+        }
+    }
+};
