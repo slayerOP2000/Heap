@@ -1,0 +1,26 @@
+priority_queue<long long, vector<long long>, greater<long long>> minh;
+         long long res=0;
+         
+         for(long long i=0;i<n;i++){
+             minh.push(arr[i]);
+         }
+         
+         /*  2
+             4
+             6
+             7
+             9
+         */
+         while(minh.size()>=2){
+             
+             long long a = minh.top();
+             minh.pop();
+             long long b = minh.top();
+             minh.pop();
+             res += a+b;
+              minh.push(a+b);
+             
+         }
+         
+         return res;
+    }
